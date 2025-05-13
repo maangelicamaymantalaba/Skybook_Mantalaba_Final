@@ -8,6 +8,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using LiveChartsCore;
+using LiveChartsCore.SkiaSharpView;
+using LiveChartsCore.SkiaSharpView.WinForms;
+using LiveChartsCore.Defaults;
+using System.Globalization;
+
 
 namespace SkyBook_Final_Project
 {
@@ -19,7 +25,7 @@ namespace SkyBook_Final_Project
         public AdminSales()
         {
             InitializeComponent();
-            LoadSalesChoices(); 
+            LoadSalesChoices();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -52,12 +58,10 @@ namespace SkyBook_Final_Project
             }
 
             string salesRange = cmbSales.SelectedItem.ToString();
-
             DataTable salesData = GetSalesData(salesRange);
 
             if (salesData.Rows.Count > 0)
             {
-                // Bind the data to the chart
                 BindDataToChart(salesData, salesRange);
             }
             else
@@ -87,7 +91,6 @@ namespace SkyBook_Final_Project
         }
         private string BuildSalesQuery(string salesRange)
         {
-            // Build the SQL query based on the selected range
             string query = "SELECT FORMAT(DepartureTime, 'yyyy-mm-dd') AS SaleDate, SUM(Price) AS TotalSales FROM tblReservation ";
             switch (salesRange)
             {
@@ -110,26 +113,34 @@ namespace SkyBook_Final_Project
         }
         private void BindDataToChart(DataTable salesData, string salesRange)
         {
+            chartSalesAnalytics.Series = Array.Empty<ISeries>();
 
-            chartSales.Series.Clear();
+            var columnSeries = new ColumnSeries<double>
+            {
+                Values = salesData.AsEnumerable().Select(row => Convert.ToDouble(row["TotalSales"])).ToArray(),
+                Name = "Sales"
+            };
 
-            var series = chartSales.Series.Add("Sales");
+            var labels = salesData.AsEnumerable()
+                .Select(row => Convert.ToDateTime(row["SaleDate"]).ToString("MM/dd/yyyy"))
+                .ToArray();
 
-            chartSales.DataSource = salesData;
-
-            series.XValueMember = "SaleDate";
-            series.YValueMembers = "TotalSales";
-
-            series.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Column;
-
-            chartSales.Titles.Clear();
-            chartSales.Titles.Add($"Sales Analytics ({salesRange})");
-            chartSales.ChartAreas[0].AxisX.Title = "Date";
-            chartSales.ChartAreas[0].AxisY.Title = "Total Sales";
-            chartSales.ChartAreas[0].AxisX.LabelStyle.Format = "MM/dd/yyyy";
-
-            chartSales.DataBind();
+            chartSalesAnalytics.Series = new ISeries[] { columnSeries };
+            chartSalesAnalytics.XAxes = new Axis[]
+            {
+                new Axis
+                {
+                    Labels = labels,
+                    Name = "Date"
+                }
+            };
+            chartSalesAnalytics.YAxes = new Axis[]
+            {
+                new Axis
+                {
+                    Name = "Total Sales"
+                }
+            };
         }
-
     }
-}
+ }

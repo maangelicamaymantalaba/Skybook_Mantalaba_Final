@@ -664,7 +664,7 @@ namespace SkyBook_Final_Project
                         cmd.Parameters.Add("@SeatNumber", OleDbType.VarChar).Value = txtSeatNumber.Text;
                         cmd.Parameters.Add("@PointA", OleDbType.VarChar).Value = cmbPointA.SelectedItem.ToString();
                         cmd.Parameters.Add("@PointB", OleDbType.VarChar).Value = cmbPointB.SelectedItem.ToString();
-                        cmd.Parameters.Add("@FlightNum", OleDbType.VarChar).Value = txtFlightNo.Text; // Use txtFlightNo to update FlightNum
+                        cmd.Parameters.Add("@FlightNum", OleDbType.VarChar).Value = txtFlightNo.Text; 
                         cmd.Parameters.Add("@Price", OleDbType.Currency).Value = CalculatePrice(cmbDestination.SelectedItem.ToString(), cmbClass.SelectedItem.ToString());
                         cmd.Parameters.Add("@ReservationID", OleDbType.Integer).Value = selectedReservationId;
 

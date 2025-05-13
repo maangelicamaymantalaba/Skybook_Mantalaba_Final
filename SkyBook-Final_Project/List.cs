@@ -23,11 +23,9 @@ namespace SkyBook_Final_Project
         }
         private void InitializeDataGridViewProperties()
         {
-            // Set AutoSizeRowsMode and AutoSizeColumnsMode for dgvPassengers
             dgvPassengers.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgvPassengers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
 
-            // Set AutoSizeRowsMode and AutoSizeColumnsMode for dgvCrew
             dgvCrew.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgvCrew.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }
@@ -59,7 +57,7 @@ namespace SkyBook_Final_Project
                 try
                 {
                     connection.Open();
-                    string query = "SELECT ID, CostumerName, Airline, CostumerDestination, SeatClass, SeatNumber, DepartureTime, Price FROM tblReservation";
+                    string query = "SELECT ID, CostumerName, Airline, CostumerDestination, SeatClass, SeatNumber, DepartureTime, Price, FlightNum FROM tblReservation";
 
                     using (OleDbCommand command = new OleDbCommand(query, connection))
                     {
@@ -84,7 +82,7 @@ namespace SkyBook_Final_Project
                 try
                 {
                     connection.Open();
-                    string query = "SELECT ID, CostumerName, Airline, CostumerDestination, SeatClass, SeatNumber, DepartureTime, Price FROM tblReservation WHERE CostumerName LIKE @CustomerName";
+                    string query = "SELECT ID, CostumerName, Airline, CostumerDestination, SeatClass, SeatNumber, DepartureTime, Price, FlightNum FROM tblReservation WHERE CostumerName LIKE @CustomerName";
 
                     using (OleDbCommand command = new OleDbCommand(query, connection))
                     {
@@ -177,5 +175,49 @@ namespace SkyBook_Final_Project
                 }
             }
         }
-      }
+
+        private void btnSearchFlightNo_Click(object sender, EventArgs e)
+        {
+            string flightNumber = txtFlightNo.Text.Trim();
+
+            if (string.IsNullOrEmpty(flightNumber))
+            {
+                MessageBox.Show("Please enter a flight number to search.");
+                return;
+            }
+
+            SearchByFlightNumber(flightNumber);
+        }
+        private void SearchByFlightNumber(string flightNumber)
+        {
+            using (OleDbConnection connection = new OleDbConnection(connectionString))
+            {
+                try
+                {
+                    connection.Open();
+                    string query = "SELECT ID, CostumerName, Airline, CostumerDestination, SeatClass, SeatNumber, DepartureTime, Price, FlightNum FROM tblReservation WHERE FlightNum LIKE @FlightNumber";
+
+                    using (OleDbCommand command = new OleDbCommand(query, connection))
+                    {
+                        command.Parameters.AddWithValue("@FlightNumber", "%" + flightNumber + "%");
+
+                        OleDbDataAdapter adapter = new OleDbDataAdapter(command);
+                        DataTable dataTable = new DataTable();
+                        adapter.Fill(dataTable);
+
+                        dgvPassengers.DataSource = dataTable;
+
+                        if (dataTable.Rows.Count == 0)
+                        {
+                            MessageBox.Show("No passengers found for that flight number.");
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("An error occurred while searching by flight number: " + ex.Message);
+                }
+            }
+        }
+    }
 }

@@ -9,34 +9,36 @@
   <Class Name="SkyBook_Final_Project.main" Collapsed="true">
     <Position X="12" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAQAAAAACAAAAAAAACAgAASACAAgADAAEAAAWAAAgA=</HashCode>
+      <HashCode>AAAQAAFAECBAAKAAEACAgIESACAQiADCEEAAAWBQAgA=</HashCode>
       <FileName>main.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SkyBook_Final_Project.SearchandBook" Collapsed="true">
     <Position X="12" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>EAAAAAACACAASBAACBCAAAACgAAQIIAAAMABBeIAQAA=</HashCode>
+      <HashCode>EBsjAAECCSAAyFogCBCBEAgSgEYQZYNEAcABBeKIQCE=</HashCode>
+      <FileName>SearchandBook.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SkyBook_Final_Project.UpdateandCancel" Collapsed="true">
     <Position X="13.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>MAAAAAACACAASBEACBCAAAACgAAQIIAAAMABBeIAQAA=</HashCode>
+      <HashCode>MBsiAAECCCAAyNsgCBCFEFgSgE4Q5YMEAcABBeKIQCE=</HashCode>
       <FileName>UpdateandCancel.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SkyBook_Final_Project.AddMembers" Collapsed="true">
     <Position X="15.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAACACBAABAAAACAAIACAAAAAAAAAEABBeAAAAQ=</HashCode>
+      <HashCode>AAIACAACBCBgAFAAAACDAIACAAAAIAEAAEABBeAACQQ=</HashCode>
       <FileName>AddMembers.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SkyBook_Final_Project.List" Collapsed="true">
     <Position X="17.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACACABAAAACBACICAAAAAAAAIEAAAaBIAAA=</HashCode>
+      <HashCode>QAABCCAEYCACAFgAAhCBACISAAAAAAAAIEAAAaBIAAA=</HashCode>
+      <FileName>List.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SkyBook_Final_Project.Program">
@@ -49,47 +51,49 @@
   <Class Name="SkyBook_Final_Project.ChangePassword" Collapsed="true">
     <Position X="11.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAABAkACAAABgAgECAAIACAAAAAAFAEFAAAWBAAQA=</HashCode>
+      <HashCode>AAAAABAgACAAABgAgACAAIACAAAAAAFAEFAAAWBAAQA=</HashCode>
       <FileName>ChangePassword.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SkyBook_Final_Project.AddUsers" Collapsed="true">
     <Position X="9.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAgAACAAACAAABAAAACAAAACACAAAIBAAEAAAWBAAgQ=</HashCode>
+      <HashCode>AAgACiAAECAEABgAAACAAIACACBAAIFAAEAAAWBAAwQ=</HashCode>
+      <FileName>AddUsers.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SkyBook_Final_Project.AdminMain" Collapsed="true">
     <Position X="9.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAAAAAAACAAAASACABAEDAAEAAASAAAgA=</HashCode>
+      <HashCode>AIAAAAEAECAAAAAAAACgAIASACgBAEDIEEAAASBQAgA=</HashCode>
       <FileName>AdminMain.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SkyBook_Final_Project.AdminSales" Collapsed="true">
     <Position X="7.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAACAAABAAAACAAABCACAAAAJAAEAAAWBAAgA=</HashCode>
+      <HashCode>ACAAAAAAMCAACBgAAACAIIBCACAAAANAAEAAAWBAAgA=</HashCode>
+      <FileName>AdminSales.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SkyBook_Final_Project.AirAsiaPhilippinesSeatMap" Collapsed="true">
     <Position X="15.5" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAA0AADbACAAABAAABCAgO1imyAYIPsbAEABgf0NAAA=</HashCode>
+      <HashCode>AAA2EMLbECAAABEAAJCCgO3imyAYIPsbgEABgf0NIAA=</HashCode>
       <FileName>AirAsiaPhilippinesSeatMap.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SkyBook_Final_Project.CebuPacificAirSeatMap" Collapsed="true">
     <Position X="13.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAA2AMLbECAAABEAAJCCgO3imyAAIPsbgEABgf0NIAA=</HashCode>
+      <HashCode>AAA2AMLbECAAABEEAJCCgO3imyAAIPsbgEABgf0NIAA=</HashCode>
       <FileName>CebuPacificAirSeatMap.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="SkyBook_Final_Project.PALExpressSeatMap" Collapsed="true">
     <Position X="12" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAA0AADbACAAABAAABCAgO1imyAAIPsbAEABgf0NAAA=</HashCode>
+      <HashCode>AAA2AMLbECAAABEAAJCCgO3imyAAIPsbgEABgf0NIAA=</HashCode>
       <FileName>PALExpressSeatMap.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -105,7 +109,7 @@
     <TypeIdentifier />
   </Class>
   <Class Name="SkyBook_Final_Project.User">
-    <Position X="1.75" Y="2.25" Width="1.5" />
+    <Position X="0.5" Y="2.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAEgAAAAQAAAAIACAAAAAACAAAAAIAAAAA=</HashCode>
       <FileName>User.cs</FileName>
@@ -114,6 +118,13 @@
   <Class Name="System.Object" Collapsed="true">
     <Position X="3.5" Y="0.5" Width="1.5" />
     <TypeIdentifier />
+  </Class>
+  <Class Name="SkyBook_Final_Project.SeatMapHelper">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAA=</HashCode>
+      <FileName>SeatMapHelper.cs</FileName>
+    </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

@@ -83,7 +83,7 @@ namespace SkyBook_Final_Project
 
                 if (userExists > 0)
                 {
-                    string updateQuery = "UPDATE tblUser SET Password = ? WHERE Username = ?";
+                    string updateQuery = "UPDATE tblUser SET [Password] = ? WHERE Username = ?";
                     OleDbCommand updateCommand = new OleDbCommand(updateQuery, connection);
                     updateCommand.Parameters.AddWithValue("?", hashedNewPassword);
                     updateCommand.Parameters.AddWithValue("?", username);

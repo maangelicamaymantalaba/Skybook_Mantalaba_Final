@@ -29,9 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminSales));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             panel1 = new Panel();
             nightControlBox1 = new ReaLTaiizor.Controls.NightControlBox();
             skyLabel1 = new ReaLTaiizor.Controls.SkyLabel();
@@ -42,18 +39,17 @@
             btnExit = new Button();
             panel2 = new Panel();
             pictureBox2 = new PictureBox();
-            chartSales = new System.Windows.Forms.DataVisualization.Charting.Chart();
             label4 = new Label();
             pictureBox1 = new PictureBox();
             cmbSales = new ReaLTaiizor.Controls.DungeonComboBox();
             btnSubmit = new ReaLTaiizor.Controls.SkyButton();
+            chartSalesAnalytics = new LiveChartsCore.SkiaSharpView.WinForms.CartesianChart();
             panel1.SuspendLayout();
             flpSidebar.SuspendLayout();
             panel3.SuspendLayout();
             panel8.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)chartSales).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -181,23 +177,6 @@
             pictureBox2.TabIndex = 48;
             pictureBox2.TabStop = false;
             // 
-            // chartSales
-            // 
-            chartSales.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            chartArea1.Name = "ChartArea1";
-            chartSales.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            chartSales.Legends.Add(legend1);
-            chartSales.Location = new Point(618, 37);
-            chartSales.Name = "chartSales";
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            chartSales.Series.Add(series1);
-            chartSales.Size = new Size(536, 677);
-            chartSales.TabIndex = 64;
-            chartSales.Text = "chart1";
-            // 
             // label4
             // 
             label4.AutoSize = true;
@@ -285,6 +264,15 @@
             btnSubmit.Text = "Submit";
             btnSubmit.Click += btnSubmit_Click;
             // 
+            // chartSalesAnalytics
+            // 
+            chartSalesAnalytics.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            chartSalesAnalytics.Location = new Point(634, 30);
+            chartSalesAnalytics.MatchAxesScreenDataRatio = false;
+            chartSalesAnalytics.Name = "chartSalesAnalytics";
+            chartSalesAnalytics.Size = new Size(517, 667);
+            chartSalesAnalytics.TabIndex = 76;
+            // 
             // AdminSales
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -292,11 +280,11 @@
             BackgroundImage = Properties.Resources.ui__3_;
             BackgroundImageLayout = ImageLayout.Stretch;
             ClientSize = new Size(1154, 726);
+            Controls.Add(chartSalesAnalytics);
             Controls.Add(btnSubmit);
             Controls.Add(cmbSales);
             Controls.Add(pictureBox1);
             Controls.Add(label4);
-            Controls.Add(chartSales);
             Controls.Add(panel2);
             Controls.Add(flpSidebar);
             Controls.Add(panel1);
@@ -312,7 +300,6 @@
             panel8.ResumeLayout(false);
             panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)chartSales).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -330,10 +317,10 @@
         private PictureBox pictureBox2;
         private Panel panel3;
         private Button btnBack;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chartSales;
         private Label label4;
         private PictureBox pictureBox1;
         private ReaLTaiizor.Controls.DungeonComboBox cmbSales;
         private ReaLTaiizor.Controls.SkyButton btnSubmit;
+        private LiveChartsCore.SkiaSharpView.WinForms.CartesianChart chartSalesAnalytics;
     }
 }

@@ -57,11 +57,11 @@ namespace SkyBook_Final_Project
                 MessageBox.Show("Invalid username or old password.");
             }
         }
-  
-
         private void ChangePassword_Load(object sender, EventArgs e)
         {
-
+           
         }
+
+
     }
 }

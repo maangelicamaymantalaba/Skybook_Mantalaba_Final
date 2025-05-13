@@ -30,7 +30,6 @@ namespace SkyBook_Final_Project
         }
         private void InitializeDataGridViewProperties()
         {
-            // Set AutoSizeRowsMode and AutoSizeColumnsMode for dgvUser
             dgvUser.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
             dgvUser.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
         }

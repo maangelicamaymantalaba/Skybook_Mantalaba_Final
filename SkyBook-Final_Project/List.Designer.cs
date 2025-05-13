@@ -45,6 +45,9 @@
             btnSearchCrew = new ReaLTaiizor.Controls.SkyButton();
             dgvCrew = new DataGridView();
             btnSearchPassengers = new ReaLTaiizor.Controls.SkyButton();
+            label3 = new Label();
+            txtFlightNo = new TextBox();
+            btnSearchFlightNo = new ReaLTaiizor.Controls.SkyButton();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvPassengers).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -232,7 +235,7 @@
             btnSearchCrew.HoverBorderColorD = Color.FromArgb(200, 25, 73, 109);
             btnSearchCrew.HoverForeColor = Color.White;
             btnSearchCrew.HoverShadowForeColor = Color.FromArgb(200, 0, 0, 0);
-            btnSearchCrew.Location = new Point(561, 464);
+            btnSearchCrew.Location = new Point(561, 462);
             btnSearchCrew.Name = "btnSearchCrew";
             btnSearchCrew.NormalBGColorA = Color.FromArgb(245, 245, 245);
             btnSearchCrew.NormalBGColorB = Color.FromArgb(230, 230, 230);
@@ -296,12 +299,73 @@
             btnSearchPassengers.Text = "SEARCH";
             btnSearchPassengers.Click += btnSearchPassengers_Click;
             // 
+            // label3
+            // 
+            label3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.FlatStyle = FlatStyle.Popup;
+            label3.Font = new Font("Yu Gothic", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.Location = new Point(637, 88);
+            label3.Name = "label3";
+            label3.Size = new Size(150, 26);
+            label3.TabIndex = 61;
+            label3.Text = "Flight Number:";
+            // 
+            // txtFlightNo
+            // 
+            txtFlightNo.Font = new Font("Segoe UI", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtFlightNo.Location = new Point(793, 84);
+            txtFlightNo.Name = "txtFlightNo";
+            txtFlightNo.Size = new Size(291, 30);
+            txtFlightNo.TabIndex = 62;
+            // 
+            // btnSearchFlightNo
+            // 
+            btnSearchFlightNo.BackColor = Color.Transparent;
+            btnSearchFlightNo.DownBGColorA = Color.FromArgb(70, 153, 205);
+            btnSearchFlightNo.DownBGColorB = Color.FromArgb(53, 124, 170);
+            btnSearchFlightNo.DownBorderColorA = Color.FromArgb(88, 168, 221);
+            btnSearchFlightNo.DownBorderColorB = Color.FromArgb(76, 149, 194);
+            btnSearchFlightNo.DownBorderColorC = Color.FromArgb(38, 93, 131);
+            btnSearchFlightNo.DownBorderColorD = Color.FromArgb(200, 25, 73, 109);
+            btnSearchFlightNo.DownForeColor = Color.White;
+            btnSearchFlightNo.DownShadowForeColor = Color.FromArgb(200, 0, 0, 0);
+            btnSearchFlightNo.Font = new Font("Verdana", 7.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSearchFlightNo.ForeColor = Color.FromArgb(27, 94, 137);
+            btnSearchFlightNo.HoverBGColorA = Color.FromArgb(70, 153, 205);
+            btnSearchFlightNo.HoverBGColorB = Color.FromArgb(53, 124, 170);
+            btnSearchFlightNo.HoverBorderColorA = Color.FromArgb(88, 168, 221);
+            btnSearchFlightNo.HoverBorderColorB = Color.FromArgb(76, 149, 194);
+            btnSearchFlightNo.HoverBorderColorC = Color.FromArgb(38, 93, 131);
+            btnSearchFlightNo.HoverBorderColorD = Color.FromArgb(200, 25, 73, 109);
+            btnSearchFlightNo.HoverForeColor = Color.White;
+            btnSearchFlightNo.HoverShadowForeColor = Color.FromArgb(200, 0, 0, 0);
+            btnSearchFlightNo.Location = new Point(1092, 82);
+            btnSearchFlightNo.Name = "btnSearchFlightNo";
+            btnSearchFlightNo.NormalBGColorA = Color.FromArgb(245, 245, 245);
+            btnSearchFlightNo.NormalBGColorB = Color.FromArgb(230, 230, 230);
+            btnSearchFlightNo.NormalBorderColorA = Color.FromArgb(252, 252, 252);
+            btnSearchFlightNo.NormalBorderColorB = Color.FromArgb(249, 249, 249);
+            btnSearchFlightNo.NormalBorderColorC = Color.FromArgb(189, 189, 189);
+            btnSearchFlightNo.NormalBorderColorD = Color.FromArgb(200, 168, 168, 168);
+            btnSearchFlightNo.NormalForeColor = Color.FromArgb(27, 94, 137);
+            btnSearchFlightNo.NormalShadowForeColor = Color.FromArgb(200, 255, 255, 255);
+            btnSearchFlightNo.Size = new Size(70, 32);
+            btnSearchFlightNo.SmoothingType = System.Drawing.Drawing2D.SmoothingMode.HighQuality;
+            btnSearchFlightNo.TabIndex = 63;
+            btnSearchFlightNo.Text = "SEARCH";
+            btnSearchFlightNo.Click += btnSearchFlightNo_Click;
+            // 
             // List
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
             ClientSize = new Size(1186, 734);
+            Controls.Add(btnSearchFlightNo);
+            Controls.Add(txtFlightNo);
+            Controls.Add(label3);
             Controls.Add(btnSearchPassengers);
             Controls.Add(dgvCrew);
             Controls.Add(btnSearchCrew);
@@ -348,6 +412,8 @@
         private ReaLTaiizor.Controls.SkyButton btnSearchCrew;
         private DataGridView dgvCrew;
         private ReaLTaiizor.Controls.SkyButton btnSearchPassengers;
-
+        private Label label3;
+        private TextBox txtFlightNo;
+        private ReaLTaiizor.Controls.SkyButton btnSearchFlightNo;
     }
 }

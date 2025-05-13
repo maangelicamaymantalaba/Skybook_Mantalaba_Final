@@ -316,8 +316,8 @@ namespace SkyBook_Final_Project
                     dgvReservation.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
 
                     dgvReservation.DataSource = dt;
-                    dgvReservation.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; // Set AutoSize for columns
-                    dgvReservation.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells; // Set AutoSize for rows
+                    dgvReservation.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill; 
+                    dgvReservation.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells; 
 
                     if (dgvReservation.Columns.Contains("DepartureTime"))
                     {

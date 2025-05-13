@@ -180,18 +180,13 @@ namespace SkyBook_Final_Project
                     {
                         MessageBox.Show("Crew member added successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                        // RELOAD DATA - THREE DIFFERENT METHODS TO ENSURE IT WORKS
-
-                        // Method 1: Clear and rebind
                         dataTable.Clear();
                         adapter.Fill(dataTable);
                         dgvCrewMembers.DataSource = null;
                         dgvCrewMembers.DataSource = dataTable;
 
-                        // Method 3: Refresh the grid directly
                         dgvCrewMembers.Refresh();
 
-                        // Clear form
                         txtname.Clear();
                         cmbCrewType.SelectedIndex = -1;
                         cmbFlightCrew.SelectedIndex = -1;

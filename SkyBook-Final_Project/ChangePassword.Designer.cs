@@ -33,12 +33,10 @@
             foreverClose1 = new ReaLTaiizor.Controls.ForeverClose();
             foreverClose2 = new ReaLTaiizor.Controls.ForeverClose();
             panel1 = new Panel();
-            cckBxOld = new CheckBox();
             txtUsername = new TextBox();
             txtOldPass = new TextBox();
             label2 = new Label();
             label1 = new Label();
-            cckBxNew = new CheckBox();
             txtNewPass = new TextBox();
             label3 = new Label();
             btnBack = new ReaLTaiizor.Controls.SkyButton();
@@ -111,18 +109,6 @@
             panel1.Size = new Size(537, 32);
             panel1.TabIndex = 20;
             // 
-            // cckBxOld
-            // 
-            cckBxOld.AutoSize = true;
-            cckBxOld.BackColor = Color.Transparent;
-            cckBxOld.ForeColor = SystemColors.ButtonHighlight;
-            cckBxOld.Location = new Point(233, 450);
-            cckBxOld.Name = "cckBxOld";
-            cckBxOld.Size = new Size(132, 24);
-            cckBxOld.TabIndex = 33;
-            cckBxOld.Text = "Show Password";
-            cckBxOld.UseVisualStyleBackColor = false;
-            // 
             // txtUsername
             // 
             txtUsername.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -157,23 +143,11 @@
             label1.BackColor = Color.Transparent;
             label1.Font = new Font("Verdana", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.ForeColor = SystemColors.HighlightText;
-            label1.Location = new Point(88, 356);
+            label1.Location = new Point(104, 356);
             label1.Name = "label1";
             label1.Size = new Size(123, 25);
             label1.TabIndex = 30;
             label1.Text = "Username:";
-            // 
-            // cckBxNew
-            // 
-            cckBxNew.AutoSize = true;
-            cckBxNew.BackColor = Color.Transparent;
-            cckBxNew.ForeColor = SystemColors.ButtonHighlight;
-            cckBxNew.Location = new Point(233, 520);
-            cckBxNew.Name = "cckBxNew";
-            cckBxNew.Size = new Size(132, 24);
-            cckBxNew.TabIndex = 36;
-            cckBxNew.Text = "Show Password";
-            cckBxNew.UseVisualStyleBackColor = false;
             // 
             // txtNewPass
             // 
@@ -303,9 +277,7 @@
             Controls.Add(pictureBox2);
             Controls.Add(btnSubmit);
             Controls.Add(btnBack);
-            Controls.Add(cckBxNew);
             Controls.Add(label3);
-            Controls.Add(cckBxOld);
             Controls.Add(txtUsername);
             Controls.Add(txtOldPass);
             Controls.Add(label2);
@@ -332,12 +304,10 @@
         private ReaLTaiizor.Controls.ForeverClose foreverClose2;
         private ReaLTaiizor.Controls.SkyLabel skyLabel2;
         private PictureBox pictureBox3;
-        private CheckBox cckBxOld;
         private TextBox txtUsername;
         private TextBox txtOldPass;
         private Label label2;
         private Label label1;
-        private CheckBox cckBxNew;
         private TextBox txtNewPass;
         private Label label3;
         private ReaLTaiizor.Controls.SkyButton btnBack;
